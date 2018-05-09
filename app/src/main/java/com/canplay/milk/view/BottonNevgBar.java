@@ -24,7 +24,7 @@ public class BottonNevgBar extends LinearLayout implements View.OnClickListener 
     private TextView[] textViews = new TextView[5];
     private Context mContext;
     private View view;
-    private com.canplay.milk.mvp.component.OnChangeListener mListener;
+    private OnChangeListener mListener;
 
     @Override
     public void onClick(View v) {
@@ -101,7 +101,7 @@ public class BottonNevgBar extends LinearLayout implements View.OnClickListener 
 
     }
 
-    public void setOnChangeListener(com.canplay.milk.mvp.component.OnChangeListener listener){
+    public void setOnChangeListener(OnChangeListener listener){
         this.mListener = listener;
     }
 

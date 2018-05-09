@@ -13,7 +13,10 @@ import com.canplay.milk.base.BaseAllActivity;
 import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.RxBus;
 import com.canplay.milk.base.SubscriptionBean;
+import com.canplay.milk.fragment.FileFragment;
+import com.canplay.milk.fragment.HomeFragment;
 import com.canplay.milk.fragment.SetFragment;
+import com.canplay.milk.fragment.WikiPediaFragment;
 import com.canplay.milk.mvp.adapter.FragmentViewPagerAdapter;
 import com.canplay.milk.mvp.component.OnChangeListener;
 import com.canplay.milk.permission.PermissionConst;
@@ -53,6 +56,9 @@ public class MainActivity extends BaseAllActivity {
     private int current = 0;
     private long firstTime = 0l;
     private SetFragment setFragment;
+    private FileFragment fileFragment;
+    private HomeFragment homeFragment;
+    private WikiPediaFragment wikiPediaFragment;
     private View line;
     private ChangeNoticeDialog dialog;
     @Override
@@ -148,7 +154,12 @@ public class MainActivity extends BaseAllActivity {
         mFragments = new ArrayList<>();
 
         setFragment=new SetFragment();
-
+        fileFragment=new FileFragment();
+        homeFragment=new HomeFragment();
+        wikiPediaFragment=new WikiPediaFragment();
+        mFragments.add(homeFragment);
+        mFragments.add(wikiPediaFragment);
+        mFragments.add(fileFragment);
         mFragments.add(setFragment);
 
     }

@@ -3,27 +3,19 @@ package com.canplay.milk.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.canplay.medical.R;
-import com.canplay.milk.base.BaseApplication;
 import com.canplay.milk.base.BaseFragment;
 import com.canplay.milk.mvp.activity.mine.MineInfoActivity;
 import com.canplay.milk.util.SpUtil;
 import com.canplay.milk.view.EditorNameDialog;
 import com.canplay.milk.view.PhotoPopupWindow;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,30 +28,24 @@ import butterknife.Unbinder;
 public class SetFragment extends BaseFragment implements View.OnClickListener {
 
     Unbinder unbinder;
-    @BindView(R.id.iv_box)
-    ImageView ivBox;
-    @BindView(R.id.iv_setting)
-    ImageView ivSetting;
+    @BindView(R.id.line)
+    View line;
     @BindView(R.id.iv_img)
     ImageView ivImg;
     @BindView(R.id.tv_name)
     TextView tvName;
-    @BindView(R.id.tv_phone)
-    TextView tvPhone;
-    @BindView(R.id.tv_address)
-    TextView tvAddress;
-    @BindView(R.id.tv_birth)
-    TextView tvBirth;
-    @BindView(R.id.tv_sex)
-    TextView tvSex;
-    @BindView(R.id.card)
-    CardView card;
-    @BindView(R.id.ll_bg)
-    LinearLayout llBg;
-    @BindView(R.id.rl_menu)
-    ListView rlMenu;
-    @BindView(R.id.line)
-    View line;
+    @BindView(R.id.ll_wifi)
+    LinearLayout llWifi;
+    @BindView(R.id.ll_about)
+    LinearLayout llAbout;
+    @BindView(R.id.imageView)
+    ImageView imageView;
+    @BindView(R.id.ll_pasw)
+    LinearLayout llPasw;
+    @BindView(R.id.ll_update)
+    LinearLayout llUpdate;
+    @BindView(R.id.ll_change)
+    LinearLayout llChange;
 
 
     private EditorNameDialog dialog;
@@ -75,7 +61,7 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_set, null);
         unbinder = ButterKnife.bind(this, view);
 
-        user_id= SpUtil.getInstance().getUserId();
+
         mWindowAddPhoto = new PhotoPopupWindow(getActivity());
         mWindowAddPhoto.setCont("解除绑定", "取消");
         mWindowAddPhoto.setColor(R.color.red_pop, 0);
@@ -91,8 +77,6 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
 
     }
 
-    private String patientDeviceId;
-    private String user_id;
 
     private void initListener() {
         ivImg.setOnClickListener(new View.OnClickListener() {
@@ -102,8 +86,7 @@ public class SetFragment extends BaseFragment implements View.OnClickListener {
 
             }
         });
-        ivSetting.setOnClickListener(this);
-        ivBox.setOnClickListener(this);
+
 
     }
 

@@ -446,7 +446,6 @@ public final class R {
         public static final int dim_foreground_disabled_material_light = 0x7f0d0055;
         public static final int dim_foreground_material_dark = 0x7f0d0056;
         public static final int dim_foreground_material_light = 0x7f0d0057;
-        public static final int dpgreen = 0x7f0d005a;
         public static final int foreground_material_dark = 0x7f0d005c;
         public static final int foreground_material_light = 0x7f0d005d;
         public static final int gplus_color_1 = 0x7f0d005e;
@@ -459,7 +458,6 @@ public final class R {
         public static final int gray_record_operate_item = 0x7f0d0067;
         public static final int gray_seekbar = 0x7f0d0068;
         public static final int gray_tab = 0x7f0d0069;
-        public static final int greens = 0x7f0d006c;
         public static final int highlighted_text_material_dark = 0x7f0d006d;
         public static final int highlighted_text_material_light = 0x7f0d006e;
         public static final int material_blue_grey_800 = 0x7f0d0072;
@@ -738,7 +736,6 @@ public final class R {
         public static final int black_cycle = 0x7f020058;
         public static final int design_fab_background = 0x7f02006c;
         public static final int design_snackbar_background = 0x7f02006d;
-        public static final int greeb_retagle = 0x7f020071;
         public static final int ic_action_previous_item = 0x7f020074;
         public static final int light_normal = 0x7f02007d;
         public static final int light_pressed = 0x7f02007e;

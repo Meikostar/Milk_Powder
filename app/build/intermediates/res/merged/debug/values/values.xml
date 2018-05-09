@@ -2708,7 +2708,7 @@
         <item name="android:backgroundDimEnabled">false</item><!-- 模糊  -->
     </style>
     <style name="progress_weather">
-        
+        <!--<item name="android:indeterminateDrawable">@drawable/progressbar_circle_1</item>-->
         <item name="android:minWidth">22dp</item>
         <item name="android:minHeight">22dp</item>
         <item name="android:maxWidth">22dp</item>
