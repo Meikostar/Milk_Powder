@@ -41,17 +41,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_capture.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_capture.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zxingLibrary/src/main/res/layout/activity_capture.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="114" column="35" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="35" />
+            <state relative-caret-position="252">
+              <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
               <folding>
                 <element signature="e#602#2732#0" expanded="false" />
                 <element signature="e#2549#2573#0" expanded="true" />
                 <element signature="e#2742#3534#0" expanded="false" />
                 <element signature="e#3231#3250#0" expanded="true" />
-                <element signature="e#5175#5196#0" expanded="true" />
+                <element signature="e#5168#5189#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaptureActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CaptureActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zxingLibrary/src/main/java/com/google/zxing/client/android/activity/CaptureActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="482" column="39" selection-start-line="482" selection-start-column="39" selection-end-line="482" selection-end-column="39" />
+            <state relative-caret-position="316">
+              <caret line="133" column="61" selection-start-line="133" selection-start-column="49" selection-end-line="133" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -3897,8 +3897,8 @@
         <option value="$PROJECT_DIR$/zxingLibrary/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/zxingLibrary/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/greeb_retagle.xml" />
-        <option value="$PROJECT_DIR$/zxingLibrary/src/main/res/layout/activity_capture.xml" />
         <option value="$PROJECT_DIR$/zxingLibrary/src/main/java/com/google/zxing/client/android/activity/CaptureActivity.java" />
+        <option value="$PROJECT_DIR$/zxingLibrary/src/main/res/layout/activity_capture.xml" />
       </list>
     </option>
   </component>
@@ -4597,7 +4597,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23104693" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -5077,29 +5077,29 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zxingLibrary/src/main/java/com/google/zxing/client/android/activity/CaptureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="133" column="61" selection-start-line="133" selection-start-column="49" selection-end-line="133" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zxingLibrary/src/main/res/layout/activity_capture.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="114" column="35" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="35" />
+        <state relative-caret-position="252">
+          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
           <folding>
             <element signature="e#602#2732#0" expanded="false" />
             <element signature="e#2549#2573#0" expanded="true" />
             <element signature="e#2742#3534#0" expanded="false" />
             <element signature="e#3231#3250#0" expanded="true" />
-            <element signature="e#5175#5196#0" expanded="true" />
+            <element signature="e#5168#5189#0" expanded="true" />
           </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zxingLibrary/src/main/java/com/google/zxing/client/android/activity/CaptureActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="482" column="39" selection-start-line="482" selection-start-column="39" selection-end-line="482" selection-end-column="39" />
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

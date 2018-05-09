@@ -1,4 +1,4 @@
-#Wed May 09 19:32:46 CST 2018
+#Wed May 09 19:35:54 CST 2018
 file.48=F\:\\GitWorkSpace\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\rxjava-1.2.9_c380b6ac152f80db72fca4f278e6ca180284a1ae\\classes.dex
 file.47=F\:\\GitWorkSpace\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\4\\classes_a71408bbcbe96d65c07ce00fa0c8b574e7c02706\\classes.dex
 file.46=F\:\\GitWorkSpace\\Milk_Powder\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\converter-simplexml-2.2.0_c630822b1ee18b80285061efa8e47241a2d79d68\\classes.dex

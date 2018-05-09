@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 09 19:32:46 CST 2018
+#Wed May 09 19:35:55 CST 2018
 20.base=F\:\\GitWorkSpace\\Milk_Powder\\app\\build\\intermediates\\res\\resources-debug.ap_
 143.base=F\:\\GitWorkSpace\\Milk_Powder\\app\\build\\intermediates\\res\\resources-debug.ap_
 493.base=F\:\\GitWorkSpace\\Milk_Powder\\app\\build\\intermediates\\res\\resources-debug.ap_
