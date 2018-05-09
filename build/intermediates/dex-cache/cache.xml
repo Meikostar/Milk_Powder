@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Powder\zxingLibrary\build\intermediates\bundles\default\libs\zxing-4.7.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8de9ca74af1dc9b963af4f072fb78eba58e9743a">
+        <dex dex="F:\GitWorkSpace\Milk_Powder\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing-4.7.3_1b563ffc0ee5887a1bd8e70536ff5de1eacad94e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Powder\app\libs\pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="F:\GitWorkSpace\Milk_Powder\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_f8b54299b274129cf516f5a3ec6482a790614295\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Powder\zxingLibrary\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b1eb2cbef45f16bbd5205bcf60ab3adc07e037eb">
+        <dex dex="F:\GitWorkSpace\Milk_Powder\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_a71408bbcbe96d65c07ce00fa0c8b574e7c02706\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitWorkSpace\Milk_Powder\gallery\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b32bf2d9c45711287eece78cdf2326acbbeb02fb">
+        <dex dex="F:\GitWorkSpace\Milk_Powder\app\build\intermediates\transforms\dex\debug\folders\1000\4\classes_d2a88dab20c0b3aa9cdfc872f110dbd69bbad3a2\classes.dex" />
+    </item>
+
+</items>

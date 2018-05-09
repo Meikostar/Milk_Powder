@@ -24,9 +24,10 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
-import java.io.IOException;
 
 import com.google.zxing.client.android.camera.open.OpenCameraInterface;
+
+import java.io.IOException;
 
 /**
  * This object wraps the Camera service object and expects to be the only one

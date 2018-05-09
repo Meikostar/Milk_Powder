@@ -1,10 +1,25 @@
-
+/*
+ * Copyright (C) 2008 ZXing authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.google.zxing.client.android.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -23,23 +38,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-
 import com.google.zxing.Result;
 import com.google.zxing.client.android.R;
 import com.google.zxing.client.android.camera.CameraManager;
-
-import com.squareup.otto.Subscribe;
-
-import java.io.IOException;
-import java.lang.reflect.Field;
-
-
-
 import com.google.zxing.client.android.decode.DecodeThread;
 import com.google.zxing.client.android.decode.DecodeUtils;
+import com.google.zxing.client.android.decode.WeacConstants;
 import com.google.zxing.client.android.encoding.ScanCodeEvent;
 import com.google.zxing.client.android.utils.AudioPlayer;
 import com.google.zxing.client.android.utils.BeepManager;
@@ -48,6 +56,11 @@ import com.google.zxing.client.android.utils.InactivityTimer;
 import com.google.zxing.client.android.utils.LogUtil;
 import com.google.zxing.client.android.utils.MyUtil;
 import com.google.zxing.client.android.utils.OttoAppConfig;
+import com.squareup.otto.Subscribe;
+
+
+import java.io.IOException;
+import java.lang.reflect.Field;
 
 /**
  * This activity opens the camera and does the actual scanning on a background
@@ -113,12 +126,12 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
         initButton();
     }
 
-    private ImageView mLightBtn;
+    private TextView mLightBtn;
 
     private void initButton() {
         ImageView backBtn = (ImageView) findViewById(R.id.action_back);
         TextView albumBtn = (TextView) findViewById(R.id.action_album);
-        mLightBtn = (ImageView) findViewById(R.id.action_light);
+        mLightBtn = (TextView) findViewById(R.id.action_light);
 
         backBtn.setOnClickListener(this);
         albumBtn.setOnClickListener(this);
@@ -238,12 +251,10 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
             // 扫描结果为网址
             if (isUrl) {
                 try {
-//                    Intent intent = new Intent("android.intent.action.VIEW");
-                    Intent intent = new Intent();
+                    Intent intent = new Intent("android.intent.action.VIEW");
 //                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-//                    Uri uri = Uri.parse(scanResult);
-//                    intent.setData(uri);
-                    intent.putExtra(SCAN_RESULT, scanResult);
+                    Uri uri = Uri.parse(scanResult);
+                    intent.setData(uri);
                     myFinish(intent);
                 } catch (Exception e) {
                     LogUtil.e(LOG_TAG, "handleDecode: " + e.toString());
@@ -270,16 +281,17 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
      * @param type       扫描类型：0，二维码；1，条形码
      */
     private void displayResult(String scanResult, int type) {
-        Intent intent = new Intent();
-        intent.putExtra(SCAN_RESULT, scanResult);
-        intent.putExtra(SCAN_TYPE, type);
-        myFinish(intent);
+//        Intent intent = new Intent(this, DisplayScanResultActivity.class);
+//        intent.putExtra(SCAN_RESULT, scanResult);
+//        intent.putExtra(SCAN_TYPE, type);
+//        myFinish(intent);
     }
 
     private void myFinish(Intent intent) {
-        setResult(RESULT_OK,intent);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, 0);
         finish();
-
+        overridePendingTransition(0, 0);
     }
 
     private void initCamera(SurfaceHolder surfaceHolder) {
@@ -314,7 +326,10 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
 
     private void displayFrameworkBugMessageAndExit() {
         // camera error
-       finish();
+//        Intent intent = new Intent(this, MyDialogActivitySingle.class);
+//        intent.putExtra(WeacConstants.TITLE, getString(R.string.prompt));
+//        intent.putExtra(WeacConstants.DETAIL, getString(R.string.camera_error));
+//        startActivityForResult(intent, REQUEST_MY_DIALOG);
 
 /*
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -418,7 +433,7 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
 
     @Override
     public void onClick(View v) {
-        int i = v.getId();
+        int i=v.getId();
         if (i == R.id.action_back) {
             finish();
 
@@ -427,18 +442,17 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
             operateLight();
 
             // 相册按钮
-        } else if (i == R.id.action_album) {//                该功能带添加
-//                if (MyUtil.isFastDoubleClick()) {
-//                    return;
-//                }
-//
-//                offLight();
+        } else if (i == R.id.action_album) {
+            if (MyUtil.isFastDoubleClick()) {
+                return;
+            }
+
+            offLight();
 //
 //                Intent intent = new Intent(this, LocalAlbumActivity.class);
 //                intent.putExtra(WeacConstants.REQUEST_LOCAL_ALBUM_TYPE, 1);
 //                startActivity(intent);
-//                overridePendingTransition(R.anim.zoomin, 0);
-
+            overridePendingTransition(R.anim.zoomin, 0);
         }
     }
 
@@ -449,11 +463,13 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
         if (!mIsLightOpen) {
             cameraManager.openLight();
             mIsLightOpen = true;
-            mLightBtn.setBackground(getResources().getDrawable(R.drawable.light_pressed));
+            mLightBtn.setText("关闭取景框");
+
+
         } else {
             cameraManager.offLight();
             mIsLightOpen = false;
-            mLightBtn.setBackground(getResources().getDrawable(R.drawable.light_normal));
+            mLightBtn.setText("点亮取景框");
         }
     }
 
@@ -464,7 +480,7 @@ public final class CaptureActivity extends BaseActivity implements SurfaceHolder
         if (mIsLightOpen) {
             cameraManager.offLight();
             mIsLightOpen = false;
-            mLightBtn.setBackground(getResources().getDrawable(R.drawable.light_normal));
+            mLightBtn.setText("点亮取景框");
         }
     }
 

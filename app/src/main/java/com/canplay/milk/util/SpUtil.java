@@ -3,7 +3,6 @@ package com.canplay.milk.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.baidu.location.BDLocation;
 import com.canplay.milk.base.ApplicationConfig;
 import com.canplay.milk.bean.USER;
 
@@ -31,16 +30,6 @@ public class SpUtil{
         settings = ApplicationConfig.context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
     }
 
-    public boolean putLocation(BDLocation location) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putString(LATITUDE, location.getLatitude()+"");
-        editor.putString(LONGITUDE, location.getLongitude()+"");
-        editor.putString(PROVINCE, location.getProvince());
-        editor.putString(CITY, location.getCity());
-        editor.putString(ADDRESS_DETAIL, location.getAddress().address);
-        editor.putString(CONTURY, location.getAddress().country);
-        return editor.commit();
-    }
 
 
     public boolean putUser(USER location) {

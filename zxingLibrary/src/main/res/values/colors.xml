@@ -103,7 +103,8 @@
 
     <color name="colorTimer">#009688</color>
     <color name="colorTimerDark">#00796B</color>
-
+    <color name="greens">#3DDDA8</color>
+    <color name="dpgreen">#159A64</color>
     <integer-array name="gplus_colors">
         <item>@color/gplus_color_1</item>
         <item>@color/gplus_color_2</item>

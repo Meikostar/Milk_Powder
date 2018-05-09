@@ -24,7 +24,7 @@
     <string name="text_already_copied">已复制到剪贴板</string>
     <string name="bar_code">条形码：%1$s</string>
     <string name="decode_null">未发现二维码/条形码</string>
-    <string name="Alignment_code">对准二维码/条形码</string>
+    <string name="Alignment_code">将取景对准条形码，即可自动 扫描。</string>
     <string name="camera_error">相机错误</string>
     <!--生成二维码-->
     <string name="generate_qr_code">生成二维码</string>
@@ -43,6 +43,6 @@
     <string name="fore_color">前景色</string>
     <string name="back_color">背景色</string>
     <string name="colors">颜色</string>
-    <string name="scan_code">扫码</string>
+    <string name="scan_code">扫一扫识别奶粉</string>
     <string name="prompt">提示</string>
 </resources>

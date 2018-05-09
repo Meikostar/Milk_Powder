@@ -10,13 +10,11 @@ import android.support.multidex.MultiDex;
 
 import com.canplay.milk.base.manager.AppManager;
 import com.canplay.milk.util.ExceptionHandler;
-import com.canplay.milk.util.JPushUtils;
 
 
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.jpush.android.api.JPushInterface;
 import io.valuesfeng.picker.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import io.valuesfeng.picker.universalimageloader.core.ImageLoader;
 import io.valuesfeng.picker.universalimageloader.core.ImageLoaderConfiguration;
@@ -58,11 +56,8 @@ public class BaseApplication extends Application {
         //全局异常处理
         initImageLoader(this);
         new ExceptionHandler().init(this);
-        JPushInterface.setDebugMode(true); 	// 设置开启日志,发布时请关闭日志
-        JPushInterface.init(this);     		// 初始化 JPush
-        String androidId = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-        JPushUtils.shareInstance().setAlias(androidId,11);
-//        JPushInterface.setLatestNotificationNumber(this, 1);
+
+
 
     }
 

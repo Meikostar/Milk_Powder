@@ -83,7 +83,7 @@ public class RegisteredSecondActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 closeKeyBoard();
-                selectorDialog.show(findViewById(R.id.tv_save));
+
             }
         });
 
@@ -116,10 +116,5 @@ public class RegisteredSecondActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }
